@@ -1,0 +1,49 @@
+{{!-- Icon and Title --}}
+<h1><img src="../assets/img/burger.png" alt="Burger"/></h1>
+<h1>Eat-Da-Burger!</h1>
+
+{{!-- Undevoured Section --}}
+<section>
+<h2>
+Burgers that are not yet devoured!
+
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devour=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+</h2>
+
+{{!-- Divider --}}
+<hr><hr>
+
+{{!-- Devoured Section --}}
+<h2>
+Burgers that are devoured!
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devour=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+</h2>
+
+</section>
+
+<h2 style="text-align:center">Add a Burger</h2>
+<form class="create-burger" style="text-align:center">
+
+  <div class="form-group">
+    <label for="fi">Burger Name:</label>
+    <input type="text" id="fi" name="burger_name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>

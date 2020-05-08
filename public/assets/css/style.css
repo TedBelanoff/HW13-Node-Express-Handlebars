@@ -1,0 +1,51 @@
+body{
+  background-color: orange;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+/* Image sizing and alignment   */
+
+img {
+  height:150px;
+  width:auto;
+  background-color:#FFFFFF;
+  overflow: hidden;
+}
+
+/* Header Alignment */
+
+h1  {
+  text-align:center;
+}
+
+/* This is the division of the Devoured/Undevoured sections */
+section {
+          display: flex;
+          column-count: 2;
+          column-width: 40%;
+}
+
+/* Section divider */
+hr  {
+  clear: both;
+  visibility: hidden;
+}
