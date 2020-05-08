@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
 //Heroku
  HOST: "us-cdbr-east-06.cleardb.net",
  PORT: process.env.PORT || 5000,
- USER: "b832475d9bca44:a1049cc5",
+ USER: "b832475d9bca44",
  PASSWORD: "a1049cc5",
  DB: "heroku_a1be01af8d8b233"
 });
