@@ -4,9 +4,9 @@ var connection = []
 
 if (process.env.CLEARDB_DATABASE_URL)
 //Heroku connection
-{connection=mysql.createPool(process.env.CLEARDB_DATABASE_URL)}
+{connection=mysql.createConnection(process.env.CLEARDB_DATABASE_URL)}
 else {
-connection = mysql.createPool({
+connection = mysql.createConnection({
 //Local connection
   host: "localhost",
   port: 3306,
