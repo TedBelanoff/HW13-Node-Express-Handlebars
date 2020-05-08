@@ -4,7 +4,7 @@ var connection = []
 
 if (process.env.CLEARDB_DATABASE_URL)
 //Heroku connection
-{connection=mysql.createConnection(process.env.CLEARDB_DATABASE_URL)}
+{connection=mysql.createConnection({process.env.CLEARDB_DATABASE_URL, acquireTimeout: 1000000000000000})}
 else {
 connection = mysql.createConnection({
 //Local connection
