@@ -15,13 +15,14 @@ connection = mysql.createConnection({
   database: "burger_db"
 });}
 
-//connection.connect(function(err) {
-//  if (err) {
-//    console.error("error connecting: " + err.stack);
-//    return;
-//  }
-//  console.log("connected as id " + connection.threadId);
-//});
+connection.connect(function(err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    handleDisconnect();
+    //return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
 
 function handleDisconnect() {
   connection = mysql.createConnection(db_config); // Recreate the connection, since
@@ -43,8 +44,6 @@ function handleDisconnect() {
     }
   });
 }
-
-handleDisconnect()
 
 // ORM Connection
 module.exports = connection;
