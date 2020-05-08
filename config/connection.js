@@ -3,10 +3,11 @@ var mysql = require("mysql");
 var connection
 
 if (process.env.CLEARDB_DATABASE_URL)
+//Heroku connection
 {connection=mysql.createConnection(process.env.CLEARDB_DATABASE_URL)}
 else {
 connection = mysql.createConnection({
-//Local
+//Local connection
   host: "localhost",
   port: 3306,
   user: "root",
