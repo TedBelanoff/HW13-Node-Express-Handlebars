@@ -1,7 +1,7 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
 var connection = (process.env.CLEARDB_DATABASE_URL)
-var connectionF = mysql.createConnection(connection)
+//var connectionF = mysql.createConnection(connection)
 
 function handleDisconnect() {
   connectionF = mysql.createConnection(connection); 
