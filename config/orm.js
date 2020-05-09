@@ -30,7 +30,7 @@ var orm = {
 //Select function (adapted from Unit 13 Exercise 17) 
   selectAll: function(tableInput, bb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
-    connection.query(queryString, function(err, result) {
+    connectionF.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
@@ -51,7 +51,7 @@ var orm = {
 //Print full burger set
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connectionF.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
       }
@@ -69,7 +69,7 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    connection.query(queryString, function(err, result) {
+    connectionF.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
@@ -84,7 +84,7 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    connection.query(queryString, function(err, result) {
+    connectionF.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
