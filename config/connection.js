@@ -26,4 +26,4 @@ function handleDisconnect() {
 handleDisconnect();
 
 // ORM Connection
-module.exports = connection;
+module.exports = connectionF;
